@@ -1,11 +1,16 @@
 ## Linux Server Configuration ##
+
 ___
+
 ### Description ###
-A Linux server that is setup to securely serve a web application.  
+
+An Ubuntu server that is setup to securely serve a web application.  
 
 
 IP Address: 54.186.146.96
+
 SSH Port: 2200
+
 URL http://ec2-54-186-146-96.us-west-2.compute.amazonaws.com/
 
 ### Configuration Steps ###
