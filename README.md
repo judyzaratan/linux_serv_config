@@ -85,11 +85,23 @@ URL http://ec2-54-186-146-96.us-west-2.compute.amazonaws.com/
     psql -> createuser catalog with password 'catalog';
     ```
 
+9.  Configure wgsi-mod to use repository
 
+    - clone repository into /var/www.
+    - Create a .wgsi file to direct wgsi-mod to utilize app file in repository.  
+    - Update /etc/apache2/sites-enabled/000-default.conf file to allow Apache communicate with wgsi-mod
+        Add following lines
+         - DocumentRoot /var/www/[respository_folder]
+         - WSGIScriptAlias / /var/www/[repository_folder]/[project_name].wgsi
 
+7. Update respository  to connect correctly within database.  
 
+8. Update client_secrets.json with additional hostname from Ubuntu server instance and file location references
 
-Software installed
+9.  Update Google Web App Signin console with additional signin.  
+
+### Dependencies ###
+
 * finger
 * ssh-keygen
 * apache2
@@ -97,7 +109,7 @@ Software installed
 * postgresql
 * git
 
-Web app dependencies installed
+#### Web app dependencies installed ####
 * python
 * python-pip
 * sqlalchemy
@@ -119,3 +131,6 @@ https://stackoverflow.com/questions/26080872/secret-key-not-set-in-flask-session
 Configuring Linux Web Servers
 
 https://www.udacity.com/course/configuring-linux-web-servers--ud299
+
+Client_Secrets
+https://discussions.udacity.com/t/unable-to-log-in-after-updating-client-secrets-json/249418/6
